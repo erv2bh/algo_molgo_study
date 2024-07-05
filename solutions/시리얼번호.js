@@ -8,7 +8,7 @@ function solution(inputArguments) {
   const serials = inputArguments.slice(1);
 
   function sumOfDigits(str) {
-    return str.split('').reduce((sum, char) => {
+    return str.split("").reduce((sum, char) => {
       return sum + (isNaN(Number(char)) ? 0 : Number(char));
     }, 0);
   };
