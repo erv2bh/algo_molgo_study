@@ -30,7 +30,7 @@ function solution(inputArguments) {
 
   serials.sort(compare);
 
-  return serials.join('\n');
+  return serials.join("\n");
 }
 
 console.log(solution(input));
