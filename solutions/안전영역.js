@@ -16,15 +16,15 @@ function dfs(x, y, height, visited) {
   const stack = [[x, y]];
 
   while (stack.length) {
-    const [cx, cy] = stack.pop();
+    const [currentX, currentY] = stack.pop();
 
-    for (const [dx, dy] of directions) {
-      const nx = cx + dx;
-      const ny = cy + dy;
+    for (const [deltaX, deltaY] of directions) {
+      const newX = currentX + deltaX;
+      const newY = currentY + deltaY;
 
-      if (nx >= 0 && nx < N && ny >= 0 && ny < N && !visited[nx][ny] && areas[nx][ny] > height) {
-        visited[nx][ny] = true;
-        stack.push([nx, ny]);
+      if (newX >= 0 && newX < N && newY >= 0 && newY < N && !visited[newX][newY] && areas[newX][newY] > height) {
+        visited[newX][newY] = true;
+        stack.push([newX, newY]);
       }
     }
   }
